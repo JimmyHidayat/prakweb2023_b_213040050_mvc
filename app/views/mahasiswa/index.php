@@ -3,17 +3,13 @@
 <div class="row">
     <div class="col-6">
         <h3>
-            Daftar Mahasiswa
-            <?php foreach ($data['mhs'] as$hms);?>
-            <ul>
-                    <li><?= ($hms['Nama']):?></li>
-                    <li><?= ($hms['Nrp']):?></li>
-                    <li><?= ($hms['Email']):?></li>
-                    <li><?= ($hms['Jurusan']):?></li>
-
+            Daftar Mahasiswa</h3>
+            <ul class="list-group">
+            <?php foreach ($data['mhs'] as $mhs);?>
+                <li class="list-group-item d-flex justify-content-between align-items-center"><?= $mhs['Nama']; ?>
+            <a href="<?= BASEURL;?>/mahasiswa/detail/<?= $mhs ['id']; ?>" class="badge badge-primary">detail</a></li>
+                <?php endforeach ?>
             </ul>
-        </h3>
-        <?php endforeach;?>
     </div>
 </div>
 </div>

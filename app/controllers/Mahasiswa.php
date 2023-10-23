@@ -17,4 +17,9 @@ public function detail($id) {
     $this->view ('mahasiswa/index');
     $this->view ('templates/footer');
 }
+public function tambah () {
+    if($this->model('Mahasiswa_model')->tambahDataMahasiswa($_POST)>0) {
+        header('location:'.BASEURL.'/mahasiswa');
+}
+}
 }

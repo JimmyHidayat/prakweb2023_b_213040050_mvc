@@ -19,7 +19,11 @@ public function detail($id) {
 }
 public function tambah () {
     if($this->model('Mahasiswa_model')->tambahDataMahasiswa($_POST)>0) {
+        Flasher::setFlash ('behasil','ditambahkan','success');
         header('location:'.BASEURL.'/mahasiswa');
+}else {
+    Flasher::setFlash ('behasil','ditambahkan','danger');
+    header('location:'.BASEURL.'/mahasiswa');
 }
 }
 }

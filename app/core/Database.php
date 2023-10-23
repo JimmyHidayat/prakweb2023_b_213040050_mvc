@@ -4,7 +4,7 @@ class Database {
 
     private $host = DB_HOST;
     private $user = DB_USER;
-    private $pass = PASSWORD>;
+    private $pass = PASSWORD;
     private $name = DB_NAME;
 
     private $dbh;

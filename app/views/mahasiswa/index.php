@@ -17,6 +17,7 @@
             <?php foreach ($data['mhs'] as $mhs);?>
                 <li class="list-group-item "><?= $mhs['Nama']; ?>
                 <a href="<?= BASEURL;?>/mahasiswa/hapus/<?= $mhs ['id']; ?>" class="badge badge-danger float-right ml-1" onclick="return confirm('yakin?');">hapus</a></li>
+                <a href="<?= BASEURL;?>/mahasiswa/ubah/<?= $mhs ['id']; ?>" class="badge badge-success float-right tampilModalUbah" data-toogle="modal" data-target="#formModal" data-id="<?= $mhs['id']?>">ubah</a></li>
                 <a href="<?= BASEURL;?>/mahasiswa/detail/<?= $mhs ['id']; ?>" class="badge badge-primary float-right ml-1">detail</a></li>
                 <?php endforeach; ?>
             </ul>
@@ -28,7 +29,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="judulModal">Tambah Data Mahasiswa</h1>
+        <h1 class="modal-title fs-5" id="formModaLabel">Tambah Data Mahasiswa</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
